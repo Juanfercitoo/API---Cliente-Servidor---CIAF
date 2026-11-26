@@ -1,0 +1,21 @@
+{
+  "name": "api-cancha-sintetica",
+  "version": "1.0.0",
+  "description": "API REST por capas para la gestión de reservas de una cancha sintética",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [
+    "api",
+    "rest",
+    "express",
+    "cancha",
+    "reservas"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.22.3"
+  }
+}

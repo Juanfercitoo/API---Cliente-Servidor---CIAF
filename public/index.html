@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cancha Sintética La Mechita</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Cancha Sintética La Mechita</h1>
+    <p>Reserva de turnos</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Nueva reserva</h2>
+      <form id="formTurno">
+        <label>Responsable
+          <input type="text" id="responsable">
+        </label>
+        <label>Teléfono
+          <input type="text" id="telefono">
+        </label>
+        <label>Tipo de cancha
+          <select id="tipoCancha">
+            <option value="futbol 5">Fútbol 5</option>
+            <option value="futbol 8">Fútbol 8</option>
+          </select>
+        </label>
+        <label>Fecha y hora
+          <input type="datetime-local" id="fechaHora">
+        </label>
+        <label>Duración (horas)
+          <input type="number" id="duracionHoras">
+        </label>
+        <label>Precio base
+          <input type="number" id="precioBase">
+        </label>
+        <label class="check">
+          <input type="checkbox" id="prioritario"> Horario pico (prioritario)
+        </label>
+        <button type="submit">Reservar</button>
+      </form>
+      <div id="mensaje"></div>
+    </section>
+
+    <section class="card">
+      <h2>Buscar turno por id</h2>
+      <div class="buscar">
+        <input type="number" id="buscarId" placeholder="Id del turno">
+        <button id="btnBuscar">Buscar</button>
+      </div>
+      <div id="resultadoBusqueda"></div>
+    </section>
+
+    <section class="card">
+      <h2>Turnos registrados</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Responsable</th>
+            <th>Cancha</th>
+            <th>Fecha</th>
+            <th>Horas</th>
+            <th>Precio base</th>
+            <th>Prioritario</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody id="tablaTurnos"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
